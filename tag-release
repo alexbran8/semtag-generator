@@ -12,6 +12,18 @@ VERBOSE="0"
 VERSIONTYPE="patch"
 
 
+LATEST_RELEASE=$(git tag | sort -V | tail -1)
+
+echo BASH GIT TOOLS $LATEST_RELEASE
+echo
+
+SCRIPT_PATH="./utils/spinner.sh"
+
+# Here you execute your script
+bash "$SCRIPT_PATH"
+echo
+
+
 # Function to return help text when requested with -h option.
 help() {
     # Display help.
