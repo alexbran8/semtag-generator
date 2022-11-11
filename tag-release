@@ -10,17 +10,16 @@ PREVIOUS_COMMIT=""
 RUNSILENT="0"
 VERBOSE="0"
 VERSIONTYPE="patch"
-
-
 LATEST_RELEASE=$(git tag | sort -V | tail -1)
 
 echo BASH GIT TOOLS $LATEST_RELEASE
 echo
 
+# Here you execute your script from function in external file
 SCRIPT_PATH="./utils/spinner.sh"
+source ./utils/spinner.sh
+spinnerExport
 
-# Here you execute your script
-bash "$SCRIPT_PATH"
 echo
 
 

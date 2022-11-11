@@ -1,3 +1,4 @@
+spinnerExport() {
 spinner() {
     local i sp n
     sp='/-\|'
@@ -15,3 +16,4 @@ sleep 1  # sleeping for 10 seconds is important work
 
 kill "$!" # kill the spinner
 printf '\n'
+}
