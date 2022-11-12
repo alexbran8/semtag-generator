@@ -10,10 +10,12 @@ spinner() {
 }
 
 printf 'Doing important work [coffe time]...'
+
 spinner &
 
 sleep 1  # sleeping for 10 seconds is important work
 
-kill "$!" # kill the spinner
+kill -s  PIPE "$!" & # kill the spinner 
+
 printf '\n'
 }
